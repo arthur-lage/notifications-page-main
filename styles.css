@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --light-red: hsl(1, 90%, 64%);
+  --dark-blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 70vw;
+  border-radius: 1.6rem;
+  padding: 5rem;
+  background: var(--white);
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+  margin: 5rem auto 2.5rem auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+header .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header .title-wrapper h3 {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--very-dark-blue);
+}
+
+header .title-wrapper .new-notifications {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--white);
+  background: var(--dark-blue);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+header a {
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: 0.15s ease;
+  color: var(--dark-grayish-blue);
+}
+
+header a:hover {
+  color: var(--dark-blue);
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notification {
+  display: flex;
+  padding: 1.5rem;
+  background-color: var(--very-light-grayish-blue);
+  gap: 2rem;
+  border-radius: 0.4rem;
+}
+
+.notification img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.notification .username {
+  font-size: 1.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--very-dark-blue);
+}
+
+.notification .username:hover {
+  color: var(--dark-blue);
+}
+
+.notification .information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.notification .message {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.notification .not-read {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  background: var(--light-red);
+  border-radius: 50%;
+}
+
+.notification .message .group {
+  font-size: 1.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.notification .information .time {
+  color: var(--dark-grayish-blue);
+}
+
+.notification .user-message {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--grayish-blue);
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.notification .user-message:hover {
+  background: var(--light-grayish-blue-2);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 95vw;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  header {
+    margin-top: 1.5rem;
+  }
+
+  header .title-wrapper h3 {
+    font-size: 1.8rem;
+  }
+
+  header .title-wrapper .new-notifications {
+    font-size: 1.4rem;
+  }
+
+  header a {
+    font-size: 1.2rem;
+  }
+}
